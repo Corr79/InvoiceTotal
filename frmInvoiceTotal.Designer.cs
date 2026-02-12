@@ -34,8 +34,8 @@
             label3 = new Label();
             label4 = new Label();
             txtSubtotal = new TextBox();
-            txtDiscountPercent = new TextBox();
-            txtDiscountAmount = new TextBox();
+            txtDiscountPct = new TextBox();
+            txtDiscountAmt = new TextBox();
             txtTotal = new TextBox();
             btnExit = new Button();
             SuspendLayout();
@@ -48,6 +48,7 @@
             btnCalculate.TabIndex = 8;
             btnCalculate.Text = "&Calculate";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // label1
             // 
@@ -97,21 +98,21 @@
             txtSubtotal.TabIndex = 4;
             txtSubtotal.TextChanged += textBox1_TextChanged;
             // 
-            // txtDiscountPercent
+            // txtDiscountPct
             // 
-            txtDiscountPercent.Location = new Point(188, 80);
-            txtDiscountPercent.Name = "txtDiscountPercent";
-            txtDiscountPercent.Size = new Size(150, 23);
-            txtDiscountPercent.TabIndex = 5;
-            txtDiscountPercent.TabStop = false;
+            txtDiscountPct.Location = new Point(188, 80);
+            txtDiscountPct.Name = "txtDiscountPct";
+            txtDiscountPct.Size = new Size(150, 23);
+            txtDiscountPct.TabIndex = 5;
+            txtDiscountPct.TabStop = false;
             // 
-            // txtDiscountAmount
+            // txtDiscountAmt
             // 
-            txtDiscountAmount.Location = new Point(188, 118);
-            txtDiscountAmount.Name = "txtDiscountAmount";
-            txtDiscountAmount.Size = new Size(150, 23);
-            txtDiscountAmount.TabIndex = 6;
-            txtDiscountAmount.TabStop = false;
+            txtDiscountAmt.Location = new Point(188, 118);
+            txtDiscountAmt.Name = "txtDiscountAmt";
+            txtDiscountAmt.Size = new Size(150, 23);
+            txtDiscountAmt.TabIndex = 6;
+            txtDiscountAmt.TabStop = false;
             // 
             // txtTotal
             // 
@@ -130,8 +131,9 @@
             btnExit.TabIndex = 9;
             btnExit.Text = "E&xit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // Form1
+            // frmInvoiceTotal
             // 
             AcceptButton = btnCalculate;
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -140,15 +142,15 @@
             ClientSize = new Size(388, 280);
             Controls.Add(btnExit);
             Controls.Add(txtTotal);
-            Controls.Add(txtDiscountAmount);
-            Controls.Add(txtDiscountPercent);
+            Controls.Add(txtDiscountAmt);
+            Controls.Add(txtDiscountPct);
             Controls.Add(txtSubtotal);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnCalculate);
-            Name = "Form1";
+            Name = "frmInvoiceTotal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Invoice Total";
             ResumeLayout(false);
@@ -163,8 +165,8 @@
         private Label label3;
         private Label label4;
         private TextBox txtSubtotal;
-        private TextBox txtDiscountPercent;
-        private TextBox txtDiscountAmount;
+        private TextBox txtDiscountPct;
+        private TextBox txtDiscountAmt;
         private TextBox txtTotal;
         private Button btnExit;
     }
